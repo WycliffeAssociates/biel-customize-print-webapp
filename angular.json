@@ -44,8 +44,12 @@
                             "extractLicenses": true,
                             "vendorChunk": false,
                             "buildOptimizer": true,
+<<<<<<< HEAD
                             "budgets": [
                                 {
+=======
+                            "budgets": [{
+>>>>>>> f26618209f625ee0e7dbd689d90366d91f55e69a
                                     "type": "initial",
                                     "maximumWarning": "2mb",
                                     "maximumError": "5mb"
