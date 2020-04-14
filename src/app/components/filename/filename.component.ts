@@ -67,7 +67,7 @@ export class FilenameComponent implements OnInit {
 
     // Do useful stuff with the gathered data
     const myFile = result.fileData.filename + '.' + result.fileData.filetype; 
-    const API_URL = `https://scripturerenderingpipelinedev.azurewebsites.net/api/RenderDoc?url=${this.repoUrl}&file_type=&filename=${myFile}&verses=${this.verses}&chapters=${this.chapters}&columns=${this.columns}&lineSpacing=${this.height}`;
+    const API_URL = `https://scripturerenderingpipelinedev.azurewebsites.net/api/RenderDoc?url=${this.repoUrl}&file_type=&filename=${myFile}&seperateVerses=${this.verses}&seperateChapters=${this.chapters}&columns=${this.columns}&lineSpacing=${this.height}`;
 
     if (result.fileData.filename=='' || result.fileData.filename == null) { 
       this.isValid =false;
