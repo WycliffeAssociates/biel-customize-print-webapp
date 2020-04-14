@@ -67,10 +67,10 @@ export class FilenameComponent implements OnInit {
 
     // Do useful stuff with the gathered data
     const myFile = result.fileData.filename + '.' + result.fileData.filetype; 
-    const API_URL = "https://scripturerenderingpipelinedev.azurewebsites.net/api/RenderDoc?url="+this.repoUrl+"&file_type=&book_name="+this.bookName+"&filename="+myFile+"&verses="+this.verses+"&chapters="+this.chapters;   
-    
-    if (result.fileData.filename==''||result.fileData.filename==null) { 
-      this.isValid=false;      
+    const API_URL = `https://scripturerenderingpipelinedev.azurewebsites.net/api/RenderDoc?url=${this.repoUrl}&file_type=&filename=${myFile}&verses=${this.verses}&chapters=${this.chapters}&columns=${this.columns}&lineSpacing=${this.height}`;
+
+    if (result.fileData.filename=='' || result.fileData.filename == null) { 
+      this.isValid =false;
     } 
     
     if (this.isValid) {

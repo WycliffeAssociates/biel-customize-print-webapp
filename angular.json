@@ -127,5 +127,8 @@
       }
     }
   },
-  "defaultProject": "biel-export-app"
+  "defaultProject": "biel-export-app",
+  "cli": {
+    "analytics": "a6a12acb-e099-4810-99a1-b7e23faf4ea3"
+  }
 }
