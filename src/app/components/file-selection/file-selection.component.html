@@ -7,21 +7,6 @@
 
 <div class="form-parent">
     <form #myForm="ngForm" (ngSubmit)="onSubmit()">
-        <div class="pdf-parent" id="pdf-parent">
-            <div class="left" id="pdf-left">
-                <label id="label-wrapper" class="container" for="pdf">
-                    <div id="image-pdf" class="element"></div>
-                    <div id="label-pdf-text" class="element" style="padding-bottom: 5px;">&nbsp;&nbsp;PDF</div>
-                </label>
-            </div>
-            <div class="right" id="pdf-right">
-                <label class="label-recommended">Recommended</label>
-                <input class="radio_item" id="pdf" type="radio" value="pdf" name="fileType" disabled>
-                <label id="pdf_checked" class="label_item" for="radio1"></label>
-            </div>
-            <div id="pdf-sub-text" class="pdf-sub-text"><br><br><br>PDF's can be easily read on most devices and shared with others. They cannot be edited.</div>
-        </div>
-
         <div class="doc-parent" id="doc-parent" (click)="handleDocClick()">
             <div class="left" id="doc-left">
                 <label class="container" for="doc">
@@ -30,6 +15,7 @@
                 </label>
             </div>
             <div class="right" id="doc-right">
+                <label class="label-recommended">Recommended</label>
                 <input class="radio_item" id="doc" type="radio" value="docx" name="fileType" (click)="handleDocClick()">
                 <label id="doc_checked" class="label_item" for="radio1"></label>
             </div>
@@ -37,7 +23,21 @@
             <div id="doc-sub-text" class="doc-sub-text">Useful if you need to make edits to the translation. Docx files may require software to open.</div>
         </div>
 
-        <div class="usfm-parent" id="usfm-parent" (click)="handleUsfmClick()">
+        <div class="pdf-parent" id="pdf-parent">
+            <div class="left" id="pdf-left">
+                <label id="label-wrapper" class="container" for="pdf">
+                    <div id="image-pdf" class="element"></div>
+                    <div id="label-pdf-text" class="element" style="padding-bottom: 5px;">&nbsp;&nbsp;PDF</div>
+                </label>
+            </div>
+            <div class="right" id="pdf-right">
+                <input class="radio_item" id="pdf" type="radio" value="pdf" name="fileType" disabled>
+                <label id="pdf_checked" class="label_item" for="radio1"></label>
+            </div>
+            <div id="pdf-sub-text" class="pdf-sub-text"><br><br><br>PDF's can be easily read on most devices and shared with others. They cannot be edited.</div>
+        </div>
+
+        <div class="usfm-parent" id="usfm-parent">
             <div class="left" id="usfm-left">
                 <label class="container" for="usfm">
                     <div id="image-usfm" class="element"></div>
@@ -45,7 +45,7 @@
                 </label>
             </div>
             <div class="right" id="usfm-right">
-                <input class="radio_item" id="usfm" type="radio" value="usfm" name="fileType" (click)="handleUsfmClick()">
+                <input class="radio_item" id="usfm" type="radio" value="usfm" name="fileType" disabled>
                 <label id="usfm_checked" class="label_item" for="radio1"></label>
             </div>
             <br><br><br>
