@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { FormControl, FormGroup, FormBuilder } from '@angular/forms'
 import { FileService } from 'src/app/services/file.service';
+import {environment} from '../../../environments/environment';
 
 export class File {
   fileData: FileData
@@ -67,7 +68,7 @@ export class FilenameComponent implements OnInit {
 
     // Do useful stuff with the gathered data
     const myFile = result.fileData.filename + '.' + result.fileData.filetype; 
-    const API_URL = `https://scripturerenderingpipelinedev.azurewebsites.net/api/RenderDoc?url=${this.repoUrl}&file_type=&filename=${myFile}&separateVerses=${this.verses}&separateChapters=${this.chapters}&columns=${this.columns}&lineSpacing=${this.height}`;
+    const API_URL = `${environment.url}/api/RenderDoc?url=${this.repoUrl}&file_type=&filename=${myFile}&separateVerses=${this.verses}&separateChapters=${this.chapters}&columns=${this.columns}&lineSpacing=${this.height}`;
 
     if (result.fileData.filename=='' || result.fileData.filename == null) { 
       this.isValid =false;
