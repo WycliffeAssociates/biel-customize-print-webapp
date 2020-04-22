@@ -8,12 +8,10 @@ script:
 - npm run "build:prod"
 deploy:
   provider: s3
-  access_key_id: AKIAYO3HHQMCREMQ3HWJ
-  secret_access_key:
-    secure: FpYFIjXPV9q5cykQqDPqV08N+Jdv9A/ZUN3Tb69VZEjSHLUTsz6aiDuatJAnp6X8fE7eGSws6CeFCLWcmCWejkb63sI+nMVpbknH7gG62j29sgUqSaxlBQXdzwTbpnWBL39+kezXjA1WO96iVEqORYe0w0oEtlkN6/Qrrm3D8uKSMVN/UmRrHgBZS5ICQg9D7UtscqNUJOxmXbLPU9+fuQFBbMBQ0/WuzO1ZJ2RxkjH2YjHecJ4WqTsz8ajTS8QC6e/kOVxs9orzzxiwdINvktohk/Nfm1TgNy7j8sK/JxlXFYRiIdL7huNPdTWqBbOud/3Ta+NjNrWt7vWlCgtRZ9M3wovlqzEpMqbZ1nk1Zn9H+6AdS7nqywLd269bQkZ3Iv0II8H44mmnvYviCAOJxZ+iHxkPAJ+LYpP5BUpTerVhq3Suzpxty1SSe/dZbSzdGyFBlttQEvvYOpQPnWlc8vms7KQnSVsZB6WVJt+WpmVIGxbdLnIxJ2CPB2HYYfjhC+DdzJ5tJ+fkd8Lupju7ChdR8dMQuCaz46hOnrsCQdGC+qN8F9uHmOM16JC2LfePPCG+jnF7por70M9qY3x5tV6zUF2g6GLUOiUdRrdd7/MERiAxecSIFJ9nIIXX5AQQWyz00CawPs5PB5LwrEItdXkji3mo33YAEt1EaRDXxfk=
+  access_key_id: $AWS_KEY
+  secret_access_key: $AWS_SECRET
   bucket: download.bibletranslationtools.org
-  local-dir: dist/biel-export-app
-  skip_cleanup: true
+  local_dir: dist/biel-export-app
   region: us-east-1
   acl: public_read
   on:
