@@ -15,6 +15,7 @@ deploy:
   local_dir: $TRAVIS_BUILD_DIR/dist/biel-export-app
   region: us-east-1
   acl: public_read
+  edge: true
   on:
     repo: WycliffeAssociates/biel-customize-print-webapp
     branch: dan-s3
