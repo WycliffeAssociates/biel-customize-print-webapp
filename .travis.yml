@@ -16,6 +16,7 @@ deploy:
   region: us-east-1
   acl: public_read
   edge: true
+  verbose: true
   on:
     repo: WycliffeAssociates/biel-customize-print-webapp
     branch: dan-s3
