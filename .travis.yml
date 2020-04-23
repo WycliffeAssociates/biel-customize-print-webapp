@@ -11,7 +11,7 @@ deploy:
   provider: s3
   access_key_id: $AWS_KEY
   secret_access_key: $AWS_SECRET
-  bucket: download.bibletranslationtools.org
+  bucket: "download.bibletranslationtools.org"
   local_dir: $TRAVIS_BUILD_DIR/dist/biel-export-app
   region: us-east-1
   acl: public_read
