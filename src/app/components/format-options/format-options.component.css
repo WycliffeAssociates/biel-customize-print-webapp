@@ -1,0 +1,407 @@
+/*---------------------------
+[Template Structure]
+
+Project:	 Biel USMF Formatter App
+Version:	 1.0
+Primary Use: App Template for Format Options Step 2
+Layout:      Responsive
+Platforms:   Desktop, Mobile & Tablet
+Author:      Ricky Ratliff
+Date:        March 04, 2020
+-----------------------------
+
+@charset "UTF-8";
+
+/* 1. General */
+
+body {
+    background-color: #FFFFFF;
+}
+
+.disabled {
+    display: none;
+}
+
+.breadcrumb {
+    height: 10%;
+    list-style: none;
+    overflow: hidden;
+    font: 18px Sans-Serif;
+    border-bottom: 1px solid #c3c3c3;
+    margin-bottom: 20px;
+}
+
+.breadcrumb li {
+    float: left;
+}
+
+.breadcrumb li a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 0 10px 65px;
+    background: brown;
+    /* fallback color */
+    background: hsla(34, 85%, 35%, 1);
+    position: relative;
+    display: block;
+    float: left;
+}
+
+h1 {
+    margin-left: 10px;
+    margin-bottom: 0px;
+    font-family: 'Noto Sans', sans-serif;
+    font-size: 24px;
+    letter-spacing: 0;
+    color: #1A1A1A;
+}
+
+h2 {
+    margin-left: 10px;
+    margin-bottom: 5px;
+    font-family: 'Noto Sans', sans-serif;
+    font-size: 14px;
+    letter-spacing: 0;
+    color: #1a1a1a;
+}
+
+h4 {
+    margin-bottom: 5px;
+    margin-left: 10px;
+    font-family: Tahoma, Geneva, sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 0;
+    color: #1A1A1A;
+}
+
+h5 {
+    margin-bottom: 0px;
+    margin-top: 5px;
+    margin-left: 10px;
+    font-family: Tahoma, Geneva, sans-serif;
+    font-size: 16px;
+    letter-spacing: 0;
+    color: #636161;
+}
+
+img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.image {
+    margin-top: 175px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 32%;
+}
+
+.adjust-value {
+    width: 40px;
+    text-align: center;
+    font-family: 'Noto Sans', sans-serif;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.form-parent {
+    width: 100%;
+}
+
+.input-form-control {
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 10px;
+    margin-left: 10px;
+    height: 26px;
+    width: 90%;
+    border: 2px solid #dddddd;
+    border-radius: 7px;
+    text-align: left;
+    font-family: Tahoma, Geneva, sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    font-style: italic;
+    letter-spacing: 0;
+    color: #C3C3C3;
+    opacity: 1;
+}
+
+.ico-add-btn {
+    color: #000000;
+    padding: 12px 10px 12px 10px;
+    background: url('/assets/img/add_black.png') no-repeat #ffffff center;
+    background-size: 25px auto;
+    border-radius: 5px;
+    border: 1px solid #000000;
+    margin-left: 10px;
+    margin-bottom: 10px;
+    width: 30px;
+    cursor: pointer;
+}
+
+.ico-remove-btn {
+    color: #000000;
+    padding: 12px 10px 12px 10px;
+    background: url('/assets/img/remove_black.png') no-repeat #ffffff center;
+    background-size: 25px auto;
+    border-radius: 5px;
+    border: 1px solid #000000;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    width: 30px;
+    cursor: pointer;
+}
+
+.btn-next {
+    color: #ffffff;
+    width: 55%;
+    max-width: 200px;
+    padding: 10px 20px 8px 0px;
+    background-size: 25px auto;
+    border-radius: 5px;
+    background: url('/assets/img/next-format.svg') 5% 40% no-repeat #1D73EF;
+    background-position: left center;
+    background-origin: content-box, padding-box;
+    padding-left: 35px;
+    box-shadow: 0px 2px 0px #00377C;
+    border: 1px solid rgba(160, 158, 158, 0.102);
+    border-radius: 4px;
+    opacity: 1;
+    font-weight: 500;
+    font-size: 16px;
+    margin-left: 10px;
+    margin-top: 8px;
+    margin-bottom: 30px;
+    cursor: pointer;
+    height: 40px;
+    text-align: center;
+}
+
+.btn-prev {
+    color: #1D73EF;
+    width: 18%;
+    max-width: 80px;
+    padding: 8px 10px 8px 5px;
+    background-size: 25px auto;
+    border-radius: 5px;
+    background: url('/assets/img/button-previous.png') 5% 40% no-repeat;
+    background-position: center;
+    border: 1px solid #1D73EF;
+    border-radius: 4px;
+    opacity: 1;
+    font-weight: 500;
+    font-size: 16px;
+    margin-left: 10px;
+    margin-top: 8px;
+    margin-bottom: 30px;
+    cursor: pointer;
+    height: 40px;
+}
+
+.label-height-wrapper {
+    color: #565656;
+    font-family: 'Noto Sans', sans-serif;
+    font-size: 16px;
+    font-weight: 200;
+    display: inline-table;
+}
+
+.label-columns-wrapper {
+    color: #565656;
+    font-family: 'Noto Sans', sans-serif;
+    font-size: 16px;
+    font-weight: 200;
+    display: inline-table;
+}
+
+.line-height-parent {
+    background-color: #FFFFFF;
+    font-size: .8em;
+    padding-bottom: 20px;
+    border-bottom: 2px solid #DDDDDD;
+    max-width: 411px;
+    margin: auto;
+}
+
+.columns-parent {
+    background-color: #FFFFFF;
+    font-size: .8em;
+    padding-bottom: 20px;
+    border-bottom: 2px solid #DDDDDD;
+    max-width: 411px;
+    margin: auto;
+}
+
+.label-verses-wrapper {
+    color: #565656;
+    font-family: 'Noto Sans', sans-serif;
+    font-size: 16px;
+    font-weight: 200;
+    display: inline-table;
+}
+
+.verses-parent {
+    background-color: #FFFFFF;
+    font-size: .8em;
+    padding-bottom: 20px;
+    border-bottom: 2px solid #DDDDDD;
+    max-width: 411px;
+    margin: auto;
+}
+
+.label-chapters-wrapper {
+    color: #565656;
+    font-family: 'Noto Sans', sans-serif;
+    font-size: 16px;
+    font-weight: 200;
+    display: inline-table;
+}
+
+.chapters-parent {
+    background-color: #FFFFFF;
+    font-size: .8em;
+    padding-bottom: 20px;
+    border-bottom: 2px solid #DDDDDD;
+    max-width: 411px;
+    margin: auto;
+}
+
+.button-parent {
+    border-bottom: 2px solid #c3c3c3;
+    text-align: center;
+}
+
+.progress-parent {
+    padding-bottom: 10px;
+    text-align: center;
+}
+
+.left {
+    margin-left: 5%;
+    padding-top: 20px;
+    float: left;
+    background-color: #FFFFFF;
+}
+
+.right {
+    margin-right: 5%;
+    padding-top: 20px;
+    float: right;
+    background-color: #FFFFFF;
+}
+
+.title-section {
+    height: 77px;
+    border-bottom: 2px solid #DDDDDD;
+}
+
+.heading {
+    margin-top: 60px;
+    font-family: 'Noto Sans', sans-serif;
+    font-size: 16px;
+    color: #1A1A1A;
+    text-align: center;
+    font-weight: 700;
+}
+
+.subheading {
+    margin-top: 8px;
+    font-weight: 500;
+    font-family: Tahoma, Geneva, sans-serif;
+    font-size: 24px;
+    color: #1A1A1A;
+    text-align: center;
+}
+
+.container {
+    display: table;
+}
+
+.element {
+    display: table-cell;
+    text-align: center;
+    vertical-align: middle;
+    font-family: 'Noto Sans', sans-serif;
+    font-size: 18px;
+    padding-left: 10px;
+}
+
+
+/* The switch - the box around the slider */
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+}
+
+
+/* Hide default HTML checkbox */
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+
+/* The slider */
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+input:checked+.slider {
+    background-color: #2196F3;
+}
+
+input:focus+.slider {
+    box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked+.slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+}
+
+
+/* Rounded sliders */
+
+.slider.round {
+    border-radius: 34px;
+}
+
+.slider.round:before {
+    border-radius: 50%;
+}
+
+#footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}

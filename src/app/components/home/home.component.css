@@ -1,0 +1,196 @@
+/*---------------------------
+[Template Structure]
+
+Project:	 Circles
+Version:	 1.0
+Primary Use: Site Template 
+Layout:      Responsive
+Platforms:   Mobile & Tablet
+-----------------------------
+
+@charset "UTF-8";
+
+/* 1. General */
+
+.disabled {
+    display: none;
+}
+
+body {
+    background-color: #FFFFFF;
+}
+
+h1 {
+    margin-left: 10px;
+    margin-bottom: 5px;
+    font-family: 'Noto Sans', sans-serif;
+    font-size: 24px;
+    letter-spacing: 0;
+    color: #1A1A1A;
+}
+
+h2 {
+    margin-left: 10px;
+    margin-bottom: 5px;
+    font-family: 'Noto Sans', sans-serif;
+    font-size: 16px;
+    letter-spacing: 0;
+    color: #1a1a1a;
+}
+
+h4 {
+    margin-bottom: 5px;
+    margin-left: 10px;
+    font-family: Tahoma, Geneva, sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 0;
+    color: #1A1A1A;
+}
+
+h5 {
+    margin-bottom: 0px;
+    margin-top: 5px;
+    margin-left: 10px;
+    font-family: Tahoma, Geneva, sans-serif;
+    font-size: 10px;
+    letter-spacing: 0;
+    color: #636161;
+}
+
+.error {
+    margin-left: 10px;
+    margin-bottom: 5px;
+    font-family: 'Noto Sans', sans-serif;
+    font-size: 14px;
+    font-weight: 900;
+    letter-spacing: 0;
+    color: #e74c3c;
+}
+
+.image {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    text-align: center;
+}
+
+.content-sub-heading {
+    padding-bottom: 50px;
+    text-align: left;
+    z-index: 60;
+    display: inline-block;
+}
+
+.content {
+    width: 100%;
+    z-index: 60;
+    position: relative;
+    margin-bottom: 30px;
+    text-align: center;
+    display: inline-block;
+}
+
+.repo {
+    background-color: #dce7fa;
+    color: #000000;
+    padding-top: 6px;
+    padding-left: 15px;
+    margin-bottom: 10px;
+    height: 30px;
+    width: 100%;
+    font-family: Tahoma, Geneva, sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+}
+
+.input-form-control {
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 10px;
+    margin-left: 10px;
+    height: 26px;
+    width: 90%;
+    border: 2px solid #dddddd;
+    border-radius: 7px;
+    text-align: left;
+    font-family: Tahoma, Geneva, sans-serif;
+    font-size: 18px;
+    font-weight: 500;
+    font-style: normal;
+    letter-spacing: 0;
+    color: #000000;
+    opacity: 1;
+    max-width: 500px;
+    height: 40px;
+}
+
+.input-form-control:click {
+    border: 2px solid #1D73EF;
+}
+
+input::placeholder {
+    font-family: Tahoma, Geneva, sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    font-style: italic;
+    letter-spacing: 0;
+    color: #C3C3C3;
+}
+
+.btn-load-repo {
+    color: #ffffff;
+    width: 55%;
+    max-width: 200px;
+    padding: 10px 0px 8px 0px;
+    background-size: 25px auto;
+    border-radius: 5px;
+    background: url('/assets/img/next-format.svg') 5% 40% no-repeat #1D73EF;
+    background-position: left center;
+    background-origin: content-box, padding-box;
+    padding-left: 35px;
+    box-shadow: 0px 2px 0px #00377C;
+    border: 1px solid rgba(160, 158, 158, 0.102);
+    border-radius: 4px;
+    opacity: 1;
+    font-weight: 500;
+    font-size: 16px;
+    margin-left: 10px;
+    margin-top: 8px;
+    margin-bottom: 30px;
+    cursor: pointer;
+    height: 40px;
+    text-align: center;
+}
+
+@media (min-width:768px) {
+    .content-heading {
+        height: 140px;
+    }
+    .content-heading h4 {
+        font-size: 20px;
+        margin-top: 45px;
+        padding-left: 50px;
+    }
+    .content-heading p {
+        font-size: 13px;
+        margin-top: 75px;
+        padding-left: 50px;
+    }
+    .content-heading a {
+        font-size: 20px;
+        position: absolute;
+        color: #1f1f1f!important;
+        right: 31px;
+        z-index: 98;
+        width: 60px;
+        height: 60px;
+        top: 5px;
+        text-align: center;
+        line-height: 60px;
+        background-color: #FFFFFF;
+        border-radius: 60px;
+        margin-top: 35px;
+    }
+}
