@@ -5,8 +5,7 @@ node_js:
 install:
 - npm install
 script:
-- npm run "build:prod"
-- ls $TRAVIS_BUILD_DIR/dist
+- if [ $TRAVIS_BRANCH = master ]; then npm run "build:prod"; else npm run build; fi
 deploy:
   - provider: s3
     access_key_id: $AWS_KEY
@@ -29,4 +28,4 @@ deploy:
     edge: true
     on:
       repo: WycliffeAssociates/biel-customize-print-webapp
-      branch: dev
+      branch: development
