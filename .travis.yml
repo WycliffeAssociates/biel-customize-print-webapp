@@ -29,4 +29,4 @@ deploy:
     edge: true
     on:
       repo: WycliffeAssociates/biel-customize-print-webapp
-      branch: dan-s3
+      branch: dev
