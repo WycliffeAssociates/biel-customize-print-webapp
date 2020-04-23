@@ -8,15 +8,25 @@ script:
 - npm run "build:prod"
 - ls $TRAVIS_BUILD_DIR/dist
 deploy:
-  provider: s3
-  access_key_id: $AWS_KEY
-  secret_access_key: $AWS_SECRET
-  bucket: "download.bibletranslationtools.org"
-  local_dir: $TRAVIS_BUILD_DIR/dist/biel-export-app
-  region: us-east-1
-  acl: public_read
-  edge: true
-  verbose: true
-  on:
-    repo: WycliffeAssociates/biel-customize-print-webapp
-    branch: dan-s3
+  - provider: s3
+    access_key_id: $AWS_KEY
+    secret_access_key: $AWS_SECRET
+    bucket: "download.bibletranslationtools.org"
+    local_dir: $TRAVIS_BUILD_DIR/dist/biel-export-app
+    region: us-east-1
+    acl: public_read
+    edge: true
+    on:
+      repo: WycliffeAssociates/biel-customize-print-webapp
+      branch: master
+  - provider: s3
+    access_key_id: $AWS_KEY
+    secret_access_key: $AWS_SECRET
+    bucket: "download-dev.bibletranslationtools.org"
+    local_dir: $TRAVIS_BUILD_DIR/dist/biel-export-app
+    region: us-east-1
+    acl: public_read
+    edge: true
+    on:
+      repo: WycliffeAssociates/biel-customize-print-webapp
+      branch: dan-s3
